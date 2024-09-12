@@ -1,0 +1,417 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: url('images/back.jpg') no-repeat center center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #333;
+}
+
+/* Flexbox Layout */
+main {
+    flex: 1;
+    padding: 80px 20px 20px; /* Added top padding to ensure content is not hidden behind the navbar */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg-dark.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #ff6347;
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ff4022;
+}
+
+/* Content Section */
+.content {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    flex-grow: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.food-item {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.food-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-item h2 {
+    padding: 20px;
+    font-size: 24px;
+    color: #ff6347;
+}
+
+.food-item p {
+    padding: 0 20px 20px 20px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+/* Must Try Section */
+.must-try {
+    padding: 50px 20px;
+    background-color: #312f2fbc;
+}
+
+.must-try h2 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.must-try .food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.must-try .food-item {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.must-try .food-item:hover {
+    transform: scale(1.05);
+}
+
+.must-try .food-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.must-try .food-item h3 {
+    font-size: 24px;
+    color: #ff6347;
+    margin: 15px 0;
+}
+
+.must-try .food-item p {
+    font-size: 16px;
+    color: #ccc;
+    padding: 0 15px 15px;
+}
+
+/* Featured Foods Section */
+.featured-foods {
+    padding: 50px 20px;
+    background-color: #312f2fbc;
+    color: #fff;
+}
+
+.featured-foods h2 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.featured-foods .food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featured-foods .food-item {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.featured-foods .food-item:hover {
+    transform: scale(1.05);
+}
+
+.featured-foods .food-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured-foods .food-item h3 {
+    font-size: 24px;
+    color: #ff6347;
+    margin: 15px 0;
+}
+
+.featured-foods .food-item p {
+    font-size: 16px;
+    color: #ccc;
+    padding: 0 15px 15px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #312f2fbc;
+    color: #fff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.testimonial-item {
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: 18px;
+    font-style: italic;
+    color: #ccc;
+    padding: 15px;
+    border-left: 4px solid #ff6347;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 20px;
+    background-color: #312f2fbc;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #ff4022;
+}
+
+/* About Us Content */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 48px;
+    color: #ff6347;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Our Mission Section */
+.our-mission, .our-story {
+    margin-bottom: 40px;
+}
+
+.our-mission h2, .our-story h2 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.our-mission p, .our-story p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Social Links Section */
+.social-links {
+    padding: 30px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.social-links h2 {
+    font-size: 36px;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+

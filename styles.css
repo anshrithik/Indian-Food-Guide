@@ -11,12 +11,27 @@ html, body {
 }
 
 body {
-    background: url('images/back.jpg') no-repeat center center;
+    background: url('images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     color: #fff;
     background-color: #333;
+}
+
+/* Blur effect on the background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(1.5px); /* Adjust the blur radius as needed */
+    z-index: -1;
 }
 
 /* Flexbox Layout */
@@ -119,6 +134,23 @@ h1 {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.food-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Ensures content stays inside the card when zoomed */
+}
+
+.food-item:hover {
+    transform: scale(1.05); /* Zoom the card to 105% */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a stronger hover effect */
+}
+
+.food-item a {
+    text-decoration: none;
+    color: inherit; /* Makes the link inherit the color from its parent (e.g., h2) */
 }
 
 .food-item img {
@@ -413,5 +445,45 @@ footer {
 
 .social-icons img:hover {
     transform: scale(1.2);
+}
+
+.city-content {
+    margin: 20px 0;
+}
+
+.city-content h2 {
+    color: #ff5722;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.city-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Restaurant List Styling */
+.restaurant {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.restaurant p {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+.restaurant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
 }
 
